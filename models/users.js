@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
 // generate random unique id
 const unique_id = Math.floor(Math.random() * 999999999);

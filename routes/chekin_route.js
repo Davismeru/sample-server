@@ -55,12 +55,6 @@ router.patch("/check_in", async (req, res) => {
   // 24 hours after checkedIn time
   const futureDate = updatedUserTime?.checkedInTime + 86400000; // 24 hours in milliseconds
   const timeDifference = futureDate - currentTime;
-  const totalSeconds = Math.floor(timeDifference / 1000);
-  const diffInHours = Math.floor(totalSeconds / 3600);
-  const diffInMinutes = Math.floor((totalSeconds % 3600) / 60);
-  const diffInSeconds = totalSeconds % 60;
-
-  const timeFomart = `${diffInHours} hours: ${diffInMinutes} mins : ${diffInSeconds} secs`;
 
   res.json({
     timeDiff: timeDifference,

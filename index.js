@@ -26,6 +26,10 @@ app.use("/", authRouter);
 const checkinRouter = require("./routes/chekin_route");
 app.use("/", checkinRouter);
 
+// packages middleware
+const packagesRouter = require("./routes/packages_route");
+app.use("/", packagesRouter);
+
 // mongodb connection
 const uri = process.env.MONGO_URI;
 const PORT = process.env.PORT || 3000;
