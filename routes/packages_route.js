@@ -1,10 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const packagesModel = require("../models/packages");
+const { packagesController } = require("../controllers/packages_controller");
 
-router.get("/packages", async (req, res) => {
-  const packages = await packagesModel.find({}, { _id: 0 });
-  res.json(packages);
-});
+router.get("/packages", packagesController);
 
 module.exports = router;

@@ -30,6 +30,9 @@ app.use("/", checkinRouter);
 const packagesRouter = require("./routes/packages_route");
 app.use("/", packagesRouter);
 
+// stk push middleware
+const stkRouter = require("./routes/stk_route");
+app.use("/", stkRouter);
 // mongodb connection
 const uri = process.env.MONGO_URI;
 const PORT = process.env.PORT || 3000;
